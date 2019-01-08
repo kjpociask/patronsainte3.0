@@ -104,13 +104,23 @@ a {
   max-width: 100%
 }
 
+h2 {
+  font-family: "Marseille", century;
+  text-transform: uppercase;
+  font-weight: normal;
+  color: white;
+  font-size: 6em;
+  padding: 30px 0px 0px 0px;
+  margin: 0;
+  line-height: 85px;
+}
+
 h4 {
   font-family: "Chaparral", century;
   text-transform: none;
   font-size: 18px;
-  margin: 5px 0;
+  margin: 5px 2px;
   padding: 0;
-
 }
 
 
@@ -247,6 +257,30 @@ h4 {
   background-image: url(images/go2science_jawbone_hover.png);
   background-size: cover;
 }
+
+
+#litebrite_mainimage {
+  background-image: url(images/katrina_litebrite_hires.png);
+  background-size: cover;
+  background-position: right center;
+  flex-grow: 1;
+}
+
+#blurred_litebrite {
+  background-image: url(images/litebrite_block.png);
+  height: 400px;
+  flex-grow: 0;
+  flex-basis: 400px;
+  padding: 0 30px 0 60px;
+}
+
+#litebrite {
+  display: flex;
+  margin-top: 1rem;
+  color: white;
+}
+
+
 
 /* EXAMINE & ELEVATE */
 #tagline {
