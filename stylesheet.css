@@ -141,7 +141,7 @@ h4 {
 #grid-science {
   display: grid;
   grid-template-columns: repeat(3,1fr);
-  grid-gap: 1%;
+  grid-gap: 1rem;
   margin: 1rem 0;
 }
 
@@ -174,7 +174,7 @@ h4 {
 #artis {
   grid-row: 2;
   grid-column: 4 / span 2;
-  grid-gap: 1%;
+  grid-gap: 1rem;
 }
 
 #artis:hover img {
@@ -280,6 +280,9 @@ h4 {
   color: white;
 }
 
+#litebrite-mobile {
+  display: none;
+}
 
 
 /* EXAMINE & ELEVATE */
@@ -321,7 +324,6 @@ h4 {
     grid-template-columns: repeat(2,1fr);
     grid-template-rows: repeat(3, auto);
     max-height: none;
-
   }
 
   #face {
@@ -373,6 +375,24 @@ h4 {
   #jawbone {
     grid-row: 3;
     grid-column: 1;
-
   }
+
+  #litebrite {
+    display: none;
+  }
+
+  #litebrite-mobile {
+    display: block;
+  }
+
+  #litebrite-mobile img{
+    width: 100%;
+  }
+  #litebrite-mobile h2{
+    color:black;
+    font-size: 3em;
+    line-height: 1em;
+    padding: 10px 0 0 0;
+  }
+
 }
