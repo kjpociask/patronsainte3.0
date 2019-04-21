@@ -25,6 +25,13 @@ this closes your comment -> */
   font-style: normal;
 }
 
+@font-face {
+  font-family: "Chaparral";
+  src: local("Chaparral"), url("fonts/ChaparralPro-Italic.otf") format("opentype");
+  font-weight: 400;
+  font-style: italic;
+}
+
 * {
   box-sizing:border-box;
 }
@@ -79,12 +86,12 @@ button, input {
 
 
 nav {
-  padding: 10px;
+  padding: 20px;
+  display: inline-block;
 }
 
 nav a {
   text-decoration: none;
-  letter-spacing: .2em;
   color: black;
   margin: 0 10px 0 10px;
 }
@@ -95,7 +102,7 @@ nav a:hover {
 
 a {
   text-decoration: none;
-  color: #FEA49F;
+  color: #595959;
   font-family: "Chaparral", serif;
   font-weight: 600;
 }
@@ -315,6 +322,29 @@ h4 {
   line-height: 70px;
 }
 
+
+/************************************************************/
+/***** ABOUT *************************************************/
+/************************************************************/
+
+#headshot{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-gap: 1rem;
+  margin: 1rem 0;
+}
+
+#bio{
+  grid-column: 2 / span 1;
+  grid-row: 1 / span 1;
+}
+
+.italic{
+  font-style: italic;
+  color: #F98085;
+}
+
+
 /************************************************************/
 /***** MEDIA QUERIES *************************************************/
 /************************************************************/
@@ -395,4 +425,11 @@ h4 {
     padding: 10px 0 0 0;
   }
 
+}/************************************************************/
+/***** ABOUT *************************************************/
+/************************************************************/
+
+#headshot {
+  grid-column: 1/ span 1;
+  grid-row: 1;
 }
