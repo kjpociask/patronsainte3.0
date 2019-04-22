@@ -92,12 +92,12 @@ nav {
 
 nav a {
   text-decoration: none;
-  color: black;
+  color: #4A4A4A;
   margin: 0 10px 0 10px;
 }
 
 nav a:hover {
-  border-bottom: 1px black solid;
+  border-bottom: 1px #4A4A4A solid;
 }
 
 a {
@@ -321,7 +321,9 @@ h4 {
   margin: 10px 0 4px 0;
   line-height: 70px;
 }
-
+body{
+  padding-bottom: 60px;
+}
 
 /************************************************************/
 /***** ABOUT *************************************************/
@@ -330,7 +332,7 @@ h4 {
 #headshot{
   display: grid;
   grid-template-columns: repeat(3,1fr);
-  grid-gap: 1rem;
+  grid-gap: 2rem;
   margin: 1rem 0;
 }
 
