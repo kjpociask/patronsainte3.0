@@ -341,18 +341,19 @@ body{
 /***** ABOUT ************************************************/
 /************************************************************/
 
-#headshot{
+#about {
   display: grid;
   grid-template-columns: repeat(3,1fr);
   grid-gap: 2rem;
   margin: 1rem 0;
 }
+
 #headshot img{
   margin-top: -50px;
 }
 
 #bio{
-  grid-column: 2 / span 1;
+  grid-column: 2 / span 2;
   grid-row: 1 / span 1;
   padding-top: 20px;
 }
