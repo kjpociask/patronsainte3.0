@@ -279,12 +279,6 @@ h4 {
   background-size: cover;
 }
 
-#litebrite_mainimage {
-  background-image: url(images/katrina_litebrite_hires.png);
-  background-size: cover;
-  background-position: right center;
-  flex-grow: 1;
-}
 
 #blurred_litebrite {
   background-image: url(images/litebrite_block.png);
@@ -294,15 +288,30 @@ h4 {
   padding: 0 30px 0 60px;
 }
 
+#litebrite_mainimage {
+  background-image: url(images/katrina_litebrite_hires.png);
+  background-size: cover;
+  background-position: right center;
+  flex-grow: 1;
+}
+
 #litebrite {
   display: flex;
   margin-top: 1rem;
   color: white;
 }
 
+#litebrite:hover img{
+  filter:opacity(0);
+}
+
+
 #litebrite-mobile {
   display: none;
 }
+
+
+
 
 
 /********** 'EXAMINE' ON THE HOMEPAGE *********/
@@ -438,7 +447,6 @@ body{
     grid-row: 2;
     grid-column: 1;
     padding-bottom: 20px;
-
   }
 
   #jawbone {
