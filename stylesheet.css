@@ -392,6 +392,11 @@ body{
   filter: brightness(50%);
 }
 
+.date {
+  font-size: .9em;
+  font-family: Marseille;
+  margin: 0 0 0 0px;
+}
 
 /*****************************************************************************************/
 /***** MEDIA QUERIES *********************************************************************/
@@ -476,16 +481,44 @@ nav a{
     padding: 10px 0 0 0;
   }
 
-  #headshot img{
-    grid-row: 1;
-    grid-column: 1;
-  }
 
-}/************************************************************/
+/************************************************************/
 /***** ABOUT - Media Queries *************************************************/
 /************************************************************/
 
+
 #headshot {
-  grid-column: 1/ span 1;
+  margin-top: 0px;
+  grid-column: 1/ span 3;
   grid-row: 1;
+  padding: 0 50px;
 }
+
+#headshot img{
+  margin: 0px;
+}
+
+#bio {
+  grid-column: 1/ span 3;
+  grid-row: 2;
+  margin: 0px;
+}
+
+#bio p:first-of-type {
+  padding: 0px;
+  margin: 0px;
+}
+
+/************************************************************/
+/***** SPEAKING - Media Queries *************************************************/
+/************************************************************/
+
+#articles {
+  display: block;
+}
+
+.article_thumb{
+  padding: 0 0 20px 0;
+}
+
+} /****this closes media queries**/
