@@ -25,19 +25,13 @@ this closes your comment -> */
   font-style: normal;
 }
 
-@font-face {
-  font-family: "Chaparral";
-  src: local("Chaparral"), url("fonts/ChaparralPro-Italic.otf") format("opentype");
-  font-weight: 400;
-  font-style: italic;
-}
 
 * {
   box-sizing:border-box;
 }
 
 body {
-  font-family: "Chaparral", serif;
+  font-family: "questa", sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -45,7 +39,7 @@ body {
 }
 
 button, input {
-  font-family: "Chaparral", serif;
+  font-family: "questa", sans-serif;
   font-style: normal;
   font-size: 14px;
   text-transform: uppercase;
@@ -54,25 +48,29 @@ button, input {
 
 
 .button {
-    background-color: #FDEDED; /* Peach */
     border: none;
     transition: background-color 0.25s, text-shadow 0.25s;
-    font-family: "Chaparral", serif;
-    color: #F98085;
-    padding: 5px 50px;
-    text-align: center;
     text-decoration: none;
-    text-transform: uppercase;
     display: inline-block;
-    font-size: 16px;
+    font-size: 14px;
     letter-spacing: 1.9px;
     line-height: 29px;
-    margin-bottom: 45px;
+    flex: 1 1 auto;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+   /* text-shadow: 0px 0px 10px rgba(0,0,0,0.2);*/
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+     background-image: linear-gradient(to right, #90ECC3 0%, #7DF2AB 51%, #2ACDB1 100%);
 }
 
-
 .button:hover {
-  background-color: #FFF9F9;
+  background-position: right center; /* change the direction of the change here */
   cursor: pointer;
   box-shadow: 1px 1px 5px 2px rgba(0,0,0,0.11);
   /*text-shadow: 1px 1px 2px rgba(0,0,0,.1);*/
@@ -86,66 +84,104 @@ button, input {
 
 
 nav {
-  padding: 20px;
-  display: inline-block;
+  padding: 10px 0 40px 0;
 }
 
 nav a {
+  font-size: .75em;
+  font-style: italic;
+  text-transform: lowercase;
+  color: #292929;
+  margin: 0 10px 0 10px;
+  padding: 0 10px 0 10px;
+  display: inline;
   text-decoration: none;
-  color: #4A4A4A;
-  margin: 0 20px 0 20px;
+
 }
 
 nav a:hover {
-  border-bottom: 1px #4A4A4A solid;
+  background-color: #A6FFD7;
+  color: #292929;
+  text-align: none;
 }
 
 nav .active {
-    background-color: #FDEDED;
-    color: #6A6A6A;
+  color: #60D79F;
 }
 
-a {
-  text-decoration: none;
-  color: #595959;
-  font-family: "Chaparral", serif;
-  font-weight: 600;
-}
 
 .logo img {
-  max-width: 100%
+  max-width: 100%;
 }
 
-h2 {
-  font-family: "Marseille", century;
-  text-transform: uppercase;
-  font-weight: normal;
-  color: white;
-  font-size: 6em;
-  padding: 30px 0px 0px 0px;
-  margin: 0;
-  line-height: 85px;
+a.logo img:hover {
+  opacity: 10%;
 }
 
-h3 {
-  font-family: "Marseille", century;
-  text-transform: uppercase;
-  font-weight: normal;
-  color: #595959;
-  font-size: 1.65em;
-  padding: 10px 0px 0px 0px;
-  margin: 0;
-  line-height: 30px;
+form {
+  padding: 3px;
+  text-align: left;
 }
 
-h4 {
-  font-family: "Chaparral", century;
-  text-transform: none;
-  font-size: 18px;
-  margin: 5px 2px;
-  padding: 0;
+input{
+  font-size: .75em;
+  padding: 8px;
+  font-family: "questa", sans-serif;
+}
+label {
+  font-weight: bold;
 }
 
+#grid-revcollective {
+  max-height: 58vw;
+  display: grid;
+  grid-template-columns: repeat(6,1fr);
+  grid-template-rows: repeat(1,1fr);
+  grid-gap: 1rem;
+  overflow: hidden;
+}
+
+#revgeneration {
+  grid-row: 1/ span 1;
+  grid-column: 1 / span 3;
+  grid-gap: 1rem;
+}
+
+#revgeneration img{
+  width: 100%;
+}
+
+#revtext {
+  grid-row: 1;
+  grid-column: 4 / span 2;
+  grid-gap: 1rem;
+  padding-right: 50px;
+}
+
+#grid-book {
+  max-height: 58vw;
+  display: grid;
+  grid-template-columns: repeat(6,1fr);
+  grid-template-rows: repeat(1,1fr);
+  grid-gap: 1rem;
+  overflow: hidden;
+}
+#readingbook {
+  grid-row: 1/ span 1;
+  grid-column: 4/ span 3;
+  grid-gap: 1rem;
+}
+
+#readingbook img{
+  width: 100%;
+}
+
+#writingbook {
+  grid-row: 1;
+  grid-column: 2 / span 2;
+  grid-gap: 1rem;
+  padding-right: 50px;
+}
 
 
 /************************************************************/
@@ -310,8 +346,139 @@ h4 {
   display: none;
 }
 
+h2 {
+  color: #60D79F;
+  font-family: filosofia, serif;
+  text-transform: capitalize;
+  font-size: 3em;
+  line-height: 1.25em;
+  margin: 0px;
+  padding: 0 0 30px 0;
+}
+
+h3 {
+  color: #60D79F;
+  font-family: filosofia, serif;
+  font-size: 1.25em;
+  line-height: 1.25em;
+  margin: 10px 0 0 0;
+  padding:0px;
+}
+
+p {
+  color: #292929;
+  font-family: questa-sans;
+  font-weight: Medium;
+  font-size: .8em;
+  margin: 0 0 20px 0;
+}
+
+h4 {
+  color: #292929;
+  font-family: questa-sans;
+  font-weight: Medium;
+  font-size: .8em;
+}
+
+h5 {
+  color: #292929;
+  font-family: questa-sans;
+  font-weight: Medium;
+  font-size: .7em;
+  padding: 0px;
+  margin: 5 0 10px 0;
+}
+
+h6{
+  font-family: questa-sans;
+  font-weight: 600;
+  text-transform:uppercase;
+  font-size: 1em;
+  margin: 60px 0 5px 0;
+  padding: 0px;
+  border-color: blue;
+  border-bottom: 1px solid #60D79F;
+  display: inline-block;
+}
 
 
+
+ol {
+  color: #292929;
+  font-family: questa-sans;
+  list-style:decimal-leading-zero;
+  padding: 0 0 0 15px;
+  margin: 0 0 20px 0px;
+  font-size: .75em;
+}
+
+ul {
+  color: #292929;
+  font-family: questa-sans;
+  font-weight: bold;
+  list-style: initial;
+  padding: 0 0 0 15px;
+  margin: 0 0 20px 0px;
+  font-size: .75em;
+}
+
+a {
+  font-family: questa-sans;
+  font-size: 1em;
+  color: #44C689;
+  text-decoration: none;
+}
+
+
+a:hover {
+  text-decoration: underline;
+}
+
+li a {
+  text-transform: none;
+  display: inline;
+  color: #AAAAAA;
+}
+
+li a:hover {
+  text-transform: none;
+  display: inline;
+  color: #AAAAAA;
+  text-decoration: underline;
+}
+
+li {
+  font-size: 1.2em;
+  line-height: 1.5em;
+  margin: 5px 0 0 5px;
+  font-weight: 400;
+}
+.lighten {
+  color: #CDCDCD;
+  font-weight: 400;
+}
+
+.help-text {
+  text-decoration: none;
+  color: #989898;
+  background-color: #D8D8D8;
+  border-radius: 20px;
+  padding: 0 5px;
+  margin: 0 5px;
+  font-weight: 400;
+}
+
+.help-text:hover {
+  background-color: #0FA79D;
+  color: white;
+}
+
+
+.italic {
+  font-style: italic;
+  color: #292929;
+  padding: 0 0 20px 0;
+}
 
 
 /********** 'EXAMINE' ON THE HOMEPAGE *********/
@@ -342,9 +509,12 @@ h4 {
   margin: 10px 0 4px 0;
   line-height: 70px;
 }
+
 body{
   padding-bottom: 100px;
 }
+
+
 
 /************************************************************/
 /***** ABOUT ************************************************/
@@ -368,10 +538,7 @@ body{
 }
 
 
-.italic{
-  font-style: italic;
-  color: #F98085;
-}
+
 
 /************************************************************/
 /***** SPEAKING *********************************************/
@@ -388,14 +555,75 @@ body{
   width: 100%;
 }
 
-#blog_thumb1:hover {
-  filter: brightness(50%);
+/* Container needed to position the button. Adjust the width as needed */
+.container {
+  position: relative;
+  width: 100%;
 }
 
+/* Style the button and place it in the middle of the container/image */
+.container .btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.25s, text-shadow 0.25s;
+  font-size: 14px;
+  letter-spacing: 1.5px;
+  flex: 1 1 auto;
+  margin: 5px 0 5px 0;
+  padding: 5px 15px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+ /* text-shadow: 0px 0px 10px rgba(0,0,0,0.2);*/
+  box-shadow: 0 0 20px grey;
+  border-radius: 10px;
+   background-image: linear-gradient(to right, #90ECC3 0%, #7DF2AB 51%, #2ACDB1 100%);
+}
+
+.container .btn:hover {
+    background-position: right center; /* change the direction of the change here */
+    cursor: pointer;
+    box-shadow: 1px 1px 5px 2px rgba(0,0,0,0.11);
+    /*text-shadow: 1px 1px 2px rgba(0,0,0,.1);*/
+    text-decoration: none;
+
+  }
+
+
 .date {
-  font-size: .9em;
-  font-family: Marseille;
-  margin: 0 0 0 0px;
+  font-style: italic;
+  color: #292929;
+  margin: 0px;
+}
+
+
+/*****************************************************************************************/
+/****tool tip help text styling**/
+/*****************************************************************************************/
+
+.tippy-tooltip.kate-theme {
+  background-color: #0FA79D;
+  padding: 10px;
+}
+
+.tippy-tooltip.kate-theme[data-placement^='top'] .tippy-arrow {
+  border-top-color: #0FA79D;
+}
+.tippy-tooltip.kate-theme[data-placement^='bottom'] .tippy-arrow {
+  border-bottom-color: #0FA79D;
+}
+.tippy-tooltip.kate-theme[data-placement^='left'] .tippy-arrow {
+  border-left-color: #0FA79D;
+}
+.tippy-tooltip.kate-theme[data-placement^='right'] .tippy-arrow {
+  border-right-color: #0FA79D;
 }
 
 /*****************************************************************************************/
@@ -403,84 +631,214 @@ body{
 /*****************************************************************************************/
 
 @media all and (max-width: 480px) {
-  #grid-hero {
-    grid-template-columns: repeat(2,1fr);
-    grid-template-rows: repeat(3, auto);
-    max-height: none;
-  }
+    #grid-hero {
+      grid-template-columns: repeat(6,1fr);
+      grid-template-rows: repeat(6, auto);
+      max-height: none;
+    }
+    h2 {
+      color: #60D79F;
+      font-family: filosofia, serif;
+      text-transform: capitalize;
+      font-size: 2em;
+      line-height: 1.25em;
+      margin: 0px;
+      padding: 0 0 0px 10px;
+    }
 
-nav a{
-  display: block;
+    h3 {
+      color: #60D79F;
+      font-family: filosofia, serif;
+      font-size: 1.25em;
+      line-height: 1.25em;
+      margin: 10px 0 0 10px;
+      padding:0px;
+    }
+
+    p {
+      color: #292929;
+      font-family: questa-sans;
+      font-weight: Medium;
+      font-size: .8em;
+      margin: 0 10px 20px 10px;
+    }
+
+    h4 {
+      color: #292929;
+      font-family: questa-sans;
+      font-weight: Medium;
+      font-size: .8em;
+      margin: 0 10px 0px 10px;
+    }
+
+    h5 {
+      color: #292929;
+      font-family: questa-sans;
+      font-weight: Medium;
+      font-size: .7em;
+      padding: 0px;
+      margin: 5 10px 10px 10px;
+    }
+
+    h6{
+      font-family: questa-sans;
+      font-weight: 600;
+      text-transform:uppercase;
+      font-size: .6em;
+      margin: 0px 10px 5px 10px;
+      padding: 0px;
+      border-color: blue;
+      border-bottom: 1px solid #60D79F;
+      display: inline-block;
+    }
+
+
+
+    ol {
+      color: #292929;
+      font-family: questa-sans;
+      list-style:decimal-leading-zero;
+      padding: 0 0 0 15px;
+      margin: 0 10px 20px 0px;
+      font-size: .75em;
+    }
+
+    ul {
+      color: #292929;
+      font-family: questa-sans;
+      font-weight: bold;
+      list-style: initial;
+      padding: 0 0 0 15px;
+      margin: 0 10px 20px 10px;
+      font-size: .75em;
+    }
+
+    nav a{
+      display: inline;
+      float: left;
+    }
+
+    #grid-revcollective {
+      max-height: none;
+      display: grid;
+      grid-template-columns: repeat(6,1fr);
+      grid-template-rows: repeat(2,auto);
+      grid-gap: 1rem;
+      overflow: visible;
+    }
+
+    #revgeneration {
+      grid-row: 1/ span 1;
+      grid-column: 1 / span 6;
+      grid-gap: 1rem;
+    }
+
+    #revgeneration img{
+      width: 100%;
+    }
+
+    #revtext {
+      grid-row: 2/span 1;
+      grid-column: 1 / span 6;
+      grid-gap: 1rem;
+      padding-right: 0px;
+    }
+
+    #grid-book {
+      max-height: none;
+      display: grid;
+      grid-template-columns: repeat(6,1fr);
+      grid-template-rows: repeat(2,auto);
+      grid-gap: 1rem;
+      overflow: visible;
+    }
+    #readingbook {
+      grid-row: 1/ span 1;
+      grid-column: 1/ span 6;
+      grid-gap: 1rem;
+    }
+
+    #readingbook img{
+      width: 100%;
+    }
+
+    #writingbook {
+      grid-row: 2/ span 1;
+      grid-column: 1 / span 6;
+      grid-gap: 1rem;
+      padding-right: 50px;
+    }
+
+
+    #face {
+      grid-column: 1/ span 2;
+      grid-row: 1;
+    }
+
+      #tagline {
+        font-size: 60px;
+        line-height: 57px;
+      }
+
+    .button {
+    padding: 0px 10px;
+    margin: 0 10px 30px 10px;
+    }
+
+    #owl {
+      grid-column: 1;
+      grid-row: 2;
+    }
+
+    #yellandtell {
+      grid-column: 2;
+      grid-row: 2;
+    }
+
+    #artis {
+      grid-column: 1/ span 2;
+      grid-row: 3;
+    }
+
+    #grid-science {
+      grid-template-columns: repeat(1,1fr);
+    }
+
+    #beth {
+      grid-row: 1;
+      grid-column: 1;
+      padding-bottom: 20px;
+    }
+
+    #anklebone {
+      grid-row: 2;
+      grid-column: 1;
+      padding-bottom: 20px;
+    }
+
+    #jawbone {
+      grid-row: 3;
+      grid-column: 1;
+    }
+
+    #litebrite {
+      display: none;
+    }
+
+    #litebrite-mobile {
+      display: block;
+    }
+
+    #litebrite-mobile img{
+      width: 100%;
+    }
+    #litebrite-mobile h2{
+      color:black;
+      font-size: 3em;
+      line-height: 1em;
+      padding: 10px 0 0 0;
+    }
 }
-
-  #face {
-    grid-column: 1/ span 2;
-    grid-row: 1;
-  }
-
-  #tagline {
-    font-size: 60px;
-    line-height: 57px;
-  }
-
-  .button {
-  padding: 5px 10px;
-  }
-
-  #owl {
-    grid-column: 1;
-    grid-row: 2;
-  }
-
-  #yellandtell {
-    grid-column: 2;
-    grid-row: 2;
-  }
-
-  #artis {
-    grid-column: 1/ span 2;
-    grid-row: 3;
-  }
-
-  #grid-science {
-    grid-template-columns: repeat(1,1fr);
-  }
-
-  #beth {
-    grid-row: 1;
-    grid-column: 1;
-    padding-bottom: 20px;
-  }
-
-  #anklebone {
-    grid-row: 2;
-    grid-column: 1;
-    padding-bottom: 20px;
-  }
-
-  #jawbone {
-    grid-row: 3;
-    grid-column: 1;
-  }
-
-  #litebrite {
-    display: none;
-  }
-
-  #litebrite-mobile {
-    display: block;
-  }
-
-  #litebrite-mobile img{
-    width: 100%;
-  }
-  #litebrite-mobile h2{
-    color:black;
-    font-size: 3em;
-    line-height: 1em;
-    padding: 10px 0 0 0;
-  }
-
 
 /************************************************************/
 /***** ABOUT - Media Queries *************************************************/
@@ -519,6 +877,23 @@ nav a{
 
 .article_thumb{
   padding: 0 0 20px 0;
+}
+#imposter {
+  margin-top: 0px;
+  grid-column: 1/ span 3;
+  grid-row: 1;
+}
+
+#blog_thumb2 {
+  margin-top: 0px;
+  grid-column: 1/ span 3;
+  grid-row: 2;
+}
+
+#blog_thumb3 {
+  margin-top: 0px;
+  grid-column: 1/ span 3;
+  grid-row: 3;
 }
 
 } /****this closes media queries**/
