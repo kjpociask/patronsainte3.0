@@ -838,7 +838,7 @@ body{
       line-height: 1em;
       padding: 10px 0 0 0;
     }
-}
+
 
 /************************************************************/
 /***** ABOUT - Media Queries *************************************************/
@@ -878,6 +878,7 @@ body{
 .article_thumb{
   padding: 0 0 20px 0;
 }
+
 #imposter {
   margin-top: 0px;
   grid-column: 1/ span 3;
