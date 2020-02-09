@@ -98,6 +98,7 @@ nav a:hover {
   background-color: #A6FFD7;
   color: #292929;
   text-align: none;
+  text-decoration: none;
 }
 
 nav .active {
@@ -918,11 +919,11 @@ select {
       width: 100%;
     }
 
-    #revheaders {
+    #revheadersandbodyfordesktop {
       grid-row: 2/span 1;
       grid-column: 1 / span 6;
       grid-gap: 1rem;
-      padding-right: 0px;
+      padding: 0 20px 10px 20px;
     }
 
     #revbody {
@@ -954,7 +955,7 @@ select {
       grid-row: 2/ span 1;
       grid-column: 1 / span 6;
       grid-gap: 1rem;
-      padding-right: 50px;
+      padding:0 20px 10px 20px;
     }
 
 
@@ -1122,16 +1123,26 @@ select {
 
   #revheadersfortablet {
     display: block;
-    grid-row: 2/span 1;
-    grid-column: 1 / span 4;
+    grid-row: 1/span 1;
+    grid-column: 4 / span 3;
     grid-gap: 1rem;
+    padding: 0px;
+  }
+
+  h6 {
+    margin: 10px 0 0 0;
+  }
+
+  h2 {
+    padding: 0px;
   }
 
   #revbodyfortablet {
     display: block;
-    grid-row: 2/span 1;
-    grid-column: 1 / span 4;
+    grid-row: 1/span 1;
+    grid-column: 4 / span 3;
     grid-gap: 1rem;
+    padding: 200px 0 0 0;
 
   }
   #revheadersandbodyfordesktop {
